@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y \
         libjpeg62-turbo-dev \
         libpng-dev \
         libwebp-dev \
+        nano \
+        vim \
     && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
     && docker-php-ext-install -j$(nproc) mysqli pdo pdo_mysql opcache zip gd
 
